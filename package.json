@@ -1,0 +1,45 @@
+{
+  "name": "vscode-snippeteer",
+  "displayName": "Create snippet from selection",
+  "description": "Create snippet from selection",
+  "version": "1.0.0",
+  "publisher": "Sandip Chitale",
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-snippeteer.create-start",
+        "title": "Start creating snippet",
+        "category": "Snippets"
+      },
+      {
+        "command": "vscode-snippeteer.create-finish",
+        "title": "Finish Creating snippet",
+        "category": "Snippets"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint . --ext .ts,.tsx",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.10",
+    "@types/vscode": "^1.32.0",
+    "@typescript-eslint/eslint-plugin": "^3.0.2",
+    "@typescript-eslint/parser": "^3.0.2",
+    "eslint": "^7.1.0",
+    "typescript": "^4.0.2"
+  }
+}
